@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "05ab4b96-115b-45ee-b793-c418509ef6e6",
+		"name": "LabelA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29638915"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{products_endpoint}}",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{products_endpoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{products_endpoint}}6",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{products_endpoint}}6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test from APi",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "asd manu",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "123.23",
+									"type": "text"
+								},
+								{
+									"key": "available_quantity",
+									"value": "12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{products_endpoint}}",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{products_endpoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test from APi",
+									"type": "text"
+								},
+								{
+									"key": "manufacturer",
+									"value": "asd manu",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "12323",
+									"type": "text"
+								},
+								{
+									"key": "available_quantity",
+									"value": "12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{products_endpoint}}6/",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{products_endpoint}}6"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{products_endpoint}}6/",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{products_endpoint}}6"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePartially",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "price",
+									"value": "123.3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{products_endpoint}}7/",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{products_endpoint}}7"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD related to the products"
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{carts_endpoint}}6",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{carts_endpoint}}6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{carts_endpoint}}",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{carts_endpoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{carts_endpoint}}10/",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{carts_endpoint}}10"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{carts_endpoint}}10",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{carts_endpoint}}10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD for the Carts"
+		},
+		{
+			"name": "CartItem",
+			"item": [
+				{
+					"name": "GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{cart_items_endpoint}}",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{cart_items_endpoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddNew",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cart",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "product",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{cart_items_endpoint}}",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{cart_items_endpoint}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "quantity",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "cart",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{cart_items_endpoint}}2/",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{cart_items_endpoint}}2"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}{{apiUrl}}{{cart_items_endpoint}}2/",
+							"host": [
+								"{{baseUrl}}{{apiUrl}}{{cart_items_endpoint}}2"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD for the CartItems"
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Order",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"description": "Order Processing"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "127.0.0.1:8000/",
+			"type": "string"
+		},
+		{
+			"key": "apiUrl",
+			"value": "api/",
+			"type": "string"
+		},
+		{
+			"key": "products_endpoint",
+			"value": "products/",
+			"type": "string"
+		},
+		{
+			"key": "carts_endpoint",
+			"value": "carts/",
+			"type": "string"
+		},
+		{
+			"key": "cart_items_endpoint",
+			"value": "cartitems/",
+			"type": "string"
+		}
+	]
+}
